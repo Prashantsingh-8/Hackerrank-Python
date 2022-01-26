@@ -1,0 +1,3 @@
+    Output = line.split();
+    Output = "-".join(Output)
+    return Output;
