@@ -1,0 +1,19 @@
+class Complex(object):
+    # Classes Dealing with Complex Numbers in python - Hacker Rank Solution START
+        def __init__(self, real, imaginary):
+                self.real = real
+                self.imaginary = imaginary
+        def __add__(self, no):
+            real = self.real + no.real
+            imaginary = self.imaginary + no.imaginary
+            return Complex(real,imaginary)
+…            elif self.real == 0:
+                if self.imaginary >= 0:
+                    result = "0.00+%.2fi" % (self.imaginary)
+                else:
+                    result = "0.00-%.2fi" % (abs(self.imaginary))
+            elif self.imaginary > 0:
+                result = "%.2f+%.2fi" % (self.real, self.imaginary)
+            else:
+                result = "%.2f-%.2fi" % (self.real, abs(self.imaginary))
+            return result
